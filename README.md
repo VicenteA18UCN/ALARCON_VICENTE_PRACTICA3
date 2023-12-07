@@ -29,7 +29,7 @@ Una vez hecho eso, proceder a abrir la consola y ejecutar los siguientes comando
     php artisan key:generate
 ```
 
-Luego de eso, modificar las credenciales de la base de datos:
+Luego de eso, modificar las credenciales de la base de datos en el .env:
 
 ```bash
     DB_CONNECTION=mysql
@@ -49,17 +49,33 @@ Finalmente en la consola ejecutan el siguiente comando para migrar la base de da
 Y para ejecutar el proyecto:
 
 ```bash
-   php artisan serve
+   php artisan serve --host=0.0.0.0
 ```
 
 # Instalación Frontend
 
-Para la instalación del frontend es necesario tener instalado Node.js, una vez instalado proceder a lo siguiente en una consola de comandos en la carpeta raíz del proyecto:
+Para la instalación del frontend es necesario tener instalado Node.js.
+
+**Importante:**
+Abrir el proyecto en el Visual Studio Code, copiar el _".env.example"_ y pegarlo en el proyecto. O cambiar el nombre de _".env.example"_ a _".env"_.
+una vez instalado proceder a lo siguiente en una consola de comandos en la carpeta raíz del proyecto:
 
 ```bash
     cd frontend
     npm install
     npx expo start
+```
+
+Despues de esto, proceder a modificar el archivo _.env_ con la siguiente información:
+
+```bash
+    API_URL= #IPv4 de la maquina donde se encuentra el backend
+```
+
+En caso de no saber la IPv4 de la maquina, se puede obtener a través del siguiente comando en la consola de comandos:
+
+```bash
+    ipconfig
 ```
 
 Finalmente, a través de la aplicación de [Expo Go](https://expo.dev/client), escanear el código QR que aparece en la consola de comandos. Esto se puede realizar a través de un dispositivo móvil (iOS o Android) o un emulador.

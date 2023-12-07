@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_URL } from "@env";
 
-axios.defaults.baseURL = "http://192.168.0.2:8000/api";
+axios.defaults.baseURL = `http://${API_URL}:8000/api`;
 
 const responseBody = (response) => response.data;
 
