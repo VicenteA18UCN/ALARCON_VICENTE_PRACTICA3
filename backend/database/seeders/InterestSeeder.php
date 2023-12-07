@@ -17,7 +17,7 @@ class InterestSeeder extends Seeder
             'name' => "Desarrollo Web",
             'description' => "Actualmente me dedico a aprender diversas tecnologías de desarrollo Web, como HTML, CSS, JS. Además actualmente estoy en diversos proyectos de desarrollo, utilizando tecnologías como React, NodeJS, Express, Laravel, entre otras.",
             'profile_id' => 1,
-            'image' => "images/Laravel.jpg"
+            'image' => "Laravel"
         ]);
 
         Interest::create([
@@ -28,7 +28,7 @@ class InterestSeeder extends Seeder
         ]);
 
         Interest::create([
-            'name' => "Desarrollo Web",
+            'name' => "Videojuegos",
             'description' => "Soy un apasionado por diversos videojuegos, y me gusta jugarlos en mi tiempo libre. ¡Es gracias a este pasatiempo que entre a mi carrera!",
             'profile_id' => 1,
             'image' => NULL
